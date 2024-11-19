@@ -45,6 +45,9 @@ def index_post():
     session['results_data'] = results_data
     return redirect(url_for('results_post'))
 
+#can i try make it go to loading page before results page???? which has the lyrics or gifs on before then? 
+#if results are in??? -- go to ... how would tell when it is loading? 
+
 
 @app.route('/results', methods = ['GET'])
 def results_post():

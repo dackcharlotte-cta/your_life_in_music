@@ -1,38 +1,97 @@
-body { 
-background-color: #84B5B7;
+
+body {
+    font-family: "Courier New", Courier, monospace; 
+    background-color: #002B36; 
+    color: #00FF7F; 
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.image-container {
-    text-align: center; 
-    width: 50%; 
-    margin: 0 auto; 
-}
-
-
-.image-container img {
-    max-width: 50%; 
-    height: auto; 
-    display: inline-block; 
-}
-
-.silkscreen-regular {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.silkscreen-bold {
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 700;
-  font-s
-
-h2 {
-  font-family: "Silkscreen", sans-serif;
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #00FF7F, 0 0 10px #00FF7F; 
+    color: #00FF7F;
+    margin: 20px 0;
+    animation: flicker 1.5s infinite alternate; 
 }
 
 p {
-  font-family: 'Silkscreen', sans-serif;
+    font-size: 1.2rem;
+    color: #00FA9A; 
+    text-shadow: 0 0 3px #00FA9A;
 }
 
-tyle: normal;
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    color: #002B36;
+    background-color: #00FF7F;
+    border: 2px solid #00FA9A;
+    border-radius: 5px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #00FA9A;
+    transform: scale(1.1);
+}
+
+a {
+    color: #00FF7F;
+    text-decoration: none;
+    border-bottom: 1px dashed #00FF7F; 
+}
+
+a:hover {
+    color: #00FA9A;
+    text-shadow: 0 0 5px #00FA9A;
+}
+
+.music-container {
+    background-color: #003B46; 
+    border: 3px solid #00FA9A;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 0 15px #00FA9A;
+    text-align: center;
+    margin: auto;
+}
+
+.music-container img {
+    max-width: 80%;
+    border: 3px solid #00FF7F;
+    margin: 20px 0;
+    box-shadow: 0 0 10px #00FF7F;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+
+.blink {
+    display: inline-block;
+    animation: blink 1s steps(2, start) infinite;
+    background-color: #00FF7F;
+    width: 10px;
+    height: 20px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
