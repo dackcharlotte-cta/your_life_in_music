@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Life in Gifs</title>
+</head>
+<body>
+	<h2>Your results are in!!</h2>
+		<p>The released on {{released_date}} was {{birthday_song}} by {{artists_name}}</p>
+		<table border=1>
+			<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		</table>
+
+		{% for lyrics in freq_lyrics %}
+			<p>{{lyrics}}</p>
+		{% endfor %}
+		
+		<iframe src="https://giphy.com/embed/Jqyf8tZRCPBXOXbZvR" width="480" height="360" frameBorder="0" class="giphy-embed"></iframe>
+
+
+</body>
+</html>
+

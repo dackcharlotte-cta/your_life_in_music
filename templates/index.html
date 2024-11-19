@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Your Life in Music</title>
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+</body>
+	<img src="{{url_for('static', filename='life_in_music.png')}}">
+	<h2> Discover the song released on your birthday through out the years! <h2>
+	<form method="POST">
+		<label>Birthday: </label> 
+		<!-- the double {} pulls the variable from our python script -->
+		<input name=birthday type="date" value={{birthday}}><br><br>
+		<label>Your Name:</label> 
+		<!-- the double {} pulls the variable from our python script -->
+		<input name=name type="text" value={{name}}><br><br>
+	  	<input type="submit" value="Submit"><br><br>
+	</form>
+
+	<p id="loading-message" style="display:none;">Searching...</p>
+
+	<script>
+	function showLoadingMessage() {
+	    document.getElementById("loading-message").style.display = "block";
+	}
+	</script>
+
+
+</body>
+</html>
+
